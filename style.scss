@@ -1,0 +1,330 @@
+$article: #d5d9e0;
+$font: 'Arvo', serif;
+$main-font: 'Spectral SC', serif;
+$rows: 12;
+$body-color: grey;
+$navbar-color: #7f8691;
+$lightfooter-color: #2e2f30;
+$icon-color: #3b99f7;
+$font-color-light: #fff;
+$font-color-dark: #000;
+$slogan-color: rgba(209, 175, 41, 0.8);
+
+* {
+	box-sizing: border-box;
+}
+
+.row::before,
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+[class*="col-"] {
+	float: left;
+	min-height: 1px;
+	width: 100%;
+}
+
+.space {
+	margin: 20px 0;
+}
+
+.color {
+	background-color: $article;
+}
+
+.layout {
+	padding: 20px;
+	text-align: center;
+	font-family: $main-font;
+
+	h2 {
+		font-size: 1.2em;
+		font-weight: bold;
+		line-height: 1.2em;
+		padding-bottom: 10px;
+	}
+}
+
+.radius-all {
+	border-radius: 5px;
+}
+
+// ----------------
+body {
+	background-color: $body-color;
+	font-size: 16px;
+}
+
+header {
+	margin: 0;
+	background-color: $navbar-color;
+	min-height: 50px;
+	border-bottom: 3px groove $font-color-dark;
+}
+
+.container {
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 auto; 
+	position: fixed;
+	z-index: 1;
+}
+
+.batman {
+	width: 130px;
+	height: 40px;
+	margin-top: 5px;
+}
+
+
+// -------------------
+.hero {
+	margin-top: 50px;
+	background-image: url("https://images.pexels.com/photos/6633/car-superhero-symbol-batman.jpg?w=940&h=650&auto=compress&cs=tinysrgb");
+	background-repeat: no-repeat;
+	background-size: 100% 120%;
+	height: 200px;
+}
+
+.slogan {
+	background-color: $slogan-color;
+	border: 2px solid $font-color-dark;
+	float: right;
+	position: relative;
+	font-family: $font;
+}
+
+.word {
+	color: $font-color-light;
+}
+
+// -------------------
+
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	padding: 10px;
+}
+
+// ------------------
+
+.gallery {
+	.midle-section {
+		height: 200px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.me {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+	}
+
+	.layer {
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+
+	i {
+		position: relative;
+		top: 45%;
+		left: 40%;
+		text-align: center;
+		background-color: $font-color-light;
+	}
+}
+// ---------
+
+.logo {
+	width: 100%;
+	padding: 20px;
+} 
+
+// ---------------------
+
+.shadow {
+	max-width: 400px;
+	max-height: 600px;
+	float: right;
+	width: 100%;
+	background-color: $font-color-light;
+	padding-left: 30px;
+}
+// ---------------------
+
+.lightfooter {
+	background-color: $lightfooter-color;
+	padding: 20px 0;
+
+	p {
+		padding: 0 10px;
+		color: $font-color-light;
+	}
+	
+	.heading {
+		text-transform: uppercase;
+		font-size: 15px;
+		color: $font-color-light;
+		padding-left: 10px;
+	}
+
+	.social {
+		width: 70%;
+		text-align: center;
+		font-size: 40px;
+		padding: 0 5px;
+	}
+
+	.icon-btn {
+		width: 30px;
+		height: 30px;
+		border: 0;
+		color: $font-color-light;
+		border-radius: 5%;
+		cursor: pointer;
+		font-size: 15px;
+		background-color: $icon-color;
+	}
+}
+
+// ---------------------
+.darkfooter {
+	background-color: $font-color-dark;
+	color: $font-color-light;
+	display: flex;
+	justify-content: center;
+
+	p {
+		line-height: 20px;
+	}
+}
+
+@media (max-width: 767px){
+    nav {
+    	ul {
+    		display: none;
+    		text-align: center;
+    	}
+
+    	a {
+    		text-align: center;
+    		line-height: 50px;
+			padding: 0 20px;
+			color: $font-color-light;
+			text-decoration: none;
+			text-transform: uppercase;
+    	}
+    }
+
+    input[type="checkbox"]:checked+ul {
+		display: block;
+	}
+
+	.buttons {
+		float: right;
+		margin: 10px 20px 0 0;
+		font-size: 30px;
+		border: none;
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
+	}
+
+	.slogan {
+		padding: 10px;
+		font-size: 1em;
+		top: 5%;
+	}
+
+	@for $i from 1 through $rows {
+	  .col-s-#{$i} {
+	    width: (100% / $rows * $i);
+	  }
+
+	  .col-s-offset-#{$i} {
+	    margin-left: (100% / $rows * $i);
+	  }
+	}
+
+}
+
+@media (min-width: 768px) {
+    nav {
+    	ul {
+    		display: inline-block;
+    		float: right;
+    	}
+
+    	li {
+    		display: inline-block;
+    	}
+
+    	a {
+    		line-height: 50px;
+			padding: 0 20px;
+			color: $font-color-light;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: block;
+			&:hover,
+			&:focus{
+				color: $font-color-dark;
+				background-color: $font-color-light;
+				font-weight: bold;
+			}
+    	}
+    }
+
+    .buttons {
+    	display: none;
+    }
+
+    .slogan {
+		padding: 20px;
+		font-size: 1.2em;
+		top: 20%;
+		max-width: 40%;
+	}
+
+	.gallery {
+		.midle-section {
+		&:hover,
+		&:focus {
+			.layer {
+				display: block;
+			}
+			.me {
+				opacity: 0.5;
+			}
+		}
+		}
+
+		.layer {
+			display: none;
+		}
+	}
+
+	.icon-btn {
+		&:hover {
+			transform: scale(1.5);
+			background-color: #0966c4;
+		}
+	}
+
+	@for $i from 1 through $rows {
+	  .col-m-#{$i} {
+	    width: (100% / $rows * $i);
+	  }
+
+	  .col-m-offset-#{$i} {
+	    margin-left: (100% / $rows * $i);
+	  }
+	}
+}

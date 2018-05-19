@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box; }
+
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+  width: 100%; }
+
+.space {
+  margin: 20px 0; }
+
+.color {
+  background-color: #d5d9e0; }
+
+.layout {
+  padding: 20px;
+  text-align: center;
+  font-family: "Spectral SC", serif; }
+  .layout h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding-bottom: 10px; }
+
+.radius-all {
+  border-radius: 5px; }
+
+body {
+  background-color: grey;
+  font-size: 16px; }
+
+header {
+  margin: 0;
+  background-color: #7f8691;
+  min-height: 50px;
+  border-bottom: 3px groove #000; }
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 1; }
+
+.batman {
+  width: 130px;
+  height: 40px;
+  margin-top: 5px; }
+
+.hero {
+  margin-top: 50px;
+  background-image: url("https://images.pexels.com/photos/6633/car-superhero-symbol-batman.jpg?w=940&h=650&auto=compress&cs=tinysrgb");
+  background-repeat: no-repeat;
+  background-size: 100% 120%;
+  height: 200px; }
+
+.slogan {
+  background-color: rgba(209, 175, 41, 0.8);
+  border: 2px solid #000;
+  float: right;
+  position: relative;
+  font-family: "Arvo", serif; }
+
+.word {
+  color: #fff; }
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 10px; }
+
+.gallery .midle-section {
+  height: 200px;
+  position: relative;
+  cursor: pointer; }
+.gallery .me {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute; }
+.gallery .layer {
+  width: 100%;
+  height: 100%;
+  display: none; }
+.gallery i {
+  position: relative;
+  top: 45%;
+  left: 40%;
+  text-align: center;
+  background-color: #fff; }
+
+.logo {
+  width: 100%;
+  padding: 20px; }
+
+.shadow {
+  max-width: 400px;
+  max-height: 600px;
+  float: right;
+  width: 100%;
+  background-color: #fff;
+  padding-left: 30px; }
+
+.lightfooter {
+  background-color: #2e2f30;
+  padding: 20px 0; }
+  .lightfooter p {
+    padding: 0 10px;
+    color: #fff; }
+  .lightfooter .heading {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    padding-left: 10px; }
+  .lightfooter .social {
+    width: 70%;
+    text-align: center;
+    font-size: 40px;
+    padding: 0 5px; }
+  .lightfooter .icon-btn {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    color: #fff;
+    border-radius: 5%;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #3b99f7; }
+
+.darkfooter {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center; }
+  .darkfooter p {
+    line-height: 20px; }
+
+@media (max-width: 767px) {
+  nav ul {
+    display: none;
+    text-align: center; }
+  nav a {
+    text-align: center;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+  input[type="checkbox"]:checked + ul {
+    display: block; }
+
+  .buttons {
+    float: right;
+    margin: 10px 20px 0 0;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px; }
+
+  .slogan {
+    padding: 10px;
+    font-size: 1em;
+    top: 5%; }
+
+  .col-s-1 {
+    width: 8.3333333333%; }
+
+  .col-s-offset-1 {
+    margin-left: 8.3333333333%; }
+
+  .col-s-2 {
+    width: 16.6666666667%; }
+
+  .col-s-offset-2 {
+    margin-left: 16.6666666667%; }
+
+  .col-s-3 {
+    width: 25%; }
+
+  .col-s-offset-3 {
+    margin-left: 25%; }
+
+  .col-s-4 {
+    width: 33.3333333333%; }
+
+  .col-s-offset-4 {
+    margin-left: 33.3333333333%; }
+
+  .col-s-5 {
+    width: 41.6666666667%; }
+
+  .col-s-offset-5 {
+    margin-left: 41.6666666667%; }
+
+  .col-s-6 {
+    width: 50%; }
+
+  .col-s-offset-6 {
+    margin-left: 50%; }
+
+  .col-s-7 {
+    width: 58.3333333333%; }
+
+  .col-s-offset-7 {
+    margin-left: 58.3333333333%; }
+
+  .col-s-8 {
+    width: 66.6666666667%; }
+
+  .col-s-offset-8 {
+    margin-left: 66.6666666667%; }
+
+  .col-s-9 {
+    width: 75%; }
+
+  .col-s-offset-9 {
+    margin-left: 75%; }
+
+  .col-s-10 {
+    width: 83.3333333333%; }
+
+  .col-s-offset-10 {
+    margin-left: 83.3333333333%; }
+
+  .col-s-11 {
+    width: 91.6666666667%; }
+
+  .col-s-offset-11 {
+    margin-left: 91.6666666667%; }
+
+  .col-s-12 {
+    width: 100%; }
+
+  .col-s-offset-12 {
+    margin-left: 100%; } }
+@media (min-width: 768px) {
+  nav ul {
+    display: inline-block;
+    float: right; }
+  nav li {
+    display: inline-block; }
+  nav a {
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block; }
+    nav a:hover, nav a:focus {
+      color: #000;
+      background-color: #fff;
+      font-weight: bold; }
+
+  .buttons {
+    display: none; }
+
+  .slogan {
+    padding: 20px;
+    font-size: 1.2em;
+    top: 20%;
+    max-width: 40%; }
+
+  .gallery .midle-section:hover .layer, .gallery .midle-section:focus .layer {
+    display: block; }
+  .gallery .midle-section:hover .me, .gallery .midle-section:focus .me {
+    opacity: 0.5; }
+  .gallery .layer {
+    display: none; }
+
+  .icon-btn:hover {
+    transform: scale(1.5);
+    background-color: #0966c4; }
+
+  .col-m-1 {
+    width: 8.3333333333%; }
+
+  .col-m-offset-1 {
+    margin-left: 8.3333333333%; }
+
+  .col-m-2 {
+    width: 16.6666666667%; }
+
+  .col-m-offset-2 {
+    margin-left: 16.6666666667%; }
+
+  .col-m-3 {
+    width: 25%; }
+
+  .col-m-offset-3 {
+    margin-left: 25%; }
+
+  .col-m-4 {
+    width: 33.3333333333%; }
+
+  .col-m-offset-4 {
+    margin-left: 33.3333333333%; }
+
+  .col-m-5 {
+    width: 41.6666666667%; }
+
+  .col-m-offset-5 {
+    margin-left: 41.6666666667%; }
+
+  .col-m-6 {
+    width: 50%; }
+
+  .col-m-offset-6 {
+    margin-left: 50%; }
+
+  .col-m-7 {
+    width: 58.3333333333%; }
+
+  .col-m-offset-7 {
+    margin-left: 58.3333333333%; }
+
+  .col-m-8 {
+    width: 66.6666666667%; }
+
+  .col-m-offset-8 {
+    margin-left: 66.6666666667%; }
+
+  .col-m-9 {
+    width: 75%; }
+
+  .col-m-offset-9 {
+    margin-left: 75%; }
+
+  .col-m-10 {
+    width: 83.3333333333%; }
+
+  .col-m-offset-10 {
+    margin-left: 83.3333333333%; }
+
+  .col-m-11 {
+    width: 91.6666666667%; }
+
+  .col-m-offset-11 {
+    margin-left: 91.6666666667%; }
+
+  .col-m-12 {
+    width: 100%; }
+
+  .col-m-offset-12 {
+    margin-left: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
